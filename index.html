@@ -54,7 +54,7 @@
     </tr>
     <tr>
         <td>
-         <h3>Bayerische Motoren Werke AG (Türkçe: Bavyera Motor Fabrikaları Anonim Şirketi) genellikle anılan kısaltmasıyla BMW, 1916 yılında kurulan Alman otomobil, motosiklet, motor ve bisiklet üreticisidir. BMW ayrıca, Mini ve Rolls-Royce, otomobil şirketlerinin sahibidir. Çalışan sayısı 120.726'dır. 2020 cirosu 98 milyar 998 milyon euro'dur, aynı yıl 2.494.451 araç üretmiştir. Bu üretimin 2.028.841 adedi BMW markası altındadır. Ayrıca aynı yıl motosiklet üretimi 169.272 adettir. Sadece motor sporlarına özel BMW M'i de bünyesinde bulundurur.</h3>
+         <h5>Bayerische Motoren Werke AG (Türkçe: Bavyera Motor Fabrikaları Anonim Şirketi) genellikle anılan kısaltmasıyla BMW, 1916 yılında kurulan Alman otomobil, motosiklet, motor ve bisiklet üreticisidir. BMW ayrıca, Mini ve Rolls-Royce, otomobil şirketlerinin sahibidir. Çalışan sayısı 120.726'dır. 2020 cirosu 98 milyar 998 milyon euro'dur, aynı yıl 2.494.451 araç üretmiştir. Bu üretimin 2.028.841 adedi BMW markası altındadır. Ayrıca aynı yıl motosiklet üretimi 169.272 adettir. Sadece motor sporlarına özel BMW M'i de bünyesinde bulundurur.</h5>
         </td>
         <td>
             FORD
@@ -68,3 +68,38 @@
     </tr>
 </table>
 </html>
+</div>
+<div>
+    <form id="userForm">
+        <label for="fname"> First Name:
+        </label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname"> Last Name: </label>
+        <input type="text" id="lname" name="lname">
+        <input type="submit" value="Submit">
+        <br>
+    </form>
+</div>
+<script>
+    const form = document.getElementById("userForm");
+
+    form.addEventListener('submit',function(event) {
+        const firstName = document.getElementById("fname").value.trim();
+        const lastName =document.getElementById("lname").value.trim()
+
+        if(!firstName || lastName) {
+            alert("lütfen tüm alanları giriniz!")
+            return;
+        }
+
+        console.log("veriler  backende gönderiliyor...");
+        console.log("First Name;",firstName);
+        console.log("Last Name;",lastName);
+        alert("Merhaba ${firstname} {lastname}, verileriniz başarıyla gönderildi!")
+    })
+</script>
+
+<footer id="iletişim">
+    <p>&copy; 2024 Web Tasarımı Haber Sitesi / Tüm Hakları Saklıdır.</p>
+    <p><a href="mailto:info@webhaber.com" style="color: white;">Bize Ulaşın</a></p>
+</footer>
